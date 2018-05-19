@@ -1,8 +1,7 @@
 package com.pecuyu.event_dispatch;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ListView;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.SimpleAdapter;
 
 import java.util.ArrayList;
@@ -16,14 +15,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView lv = (ListView) findViewById(R.id.lv);
+        MyListView listView = (MyListView) findViewById(R.id.lv);
         ArrayList<Map<String, String>> data = new ArrayList<>();
         for (int i = 0; i < 50; i++) {
             HashMap<String, String> item = new HashMap<>();
             item.put("name", "this is " + i);
             data.add(item);
         }
-        SimpleAdapter adapter = new SimpleAdapter(this, data, R.layout.listitem, new String[]{"name"}, new int[]{R.id.name});
-        lv.setAdapter(adapter);
+        SimpleAdapter adapter = new SimpleAdapter(this, data, android.R.layout.simple_list_item_1, new String[]{"name"}, new int[]{android.R.id.text1});
+        listView.setAdapter(adapter);
     }
 }
