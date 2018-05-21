@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.pecuyu.event_dispatch.RippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.pecuyu.event_dispatch.MainActivity">
+
+    <Button
+        android:id="@+id/rp_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I'm Button"
+        android:onClick="ripple"
+        android:textAllCaps="false"/>
+
+    <com.pecuyu.event_dispatch.RippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </com.pecuyu.event_dispatch.RippleLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -86,4 +101,4 @@
 
     </com.pecuyu.event_dispatch.MyScrollView>
 
-</LinearLayout>
+</com.pecuyu.event_dispatch.RippleLayout>

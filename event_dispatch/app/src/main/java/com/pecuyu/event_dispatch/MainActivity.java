@@ -2,7 +2,9 @@ package com.pecuyu.event_dispatch;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,5 +26,11 @@ public class MainActivity extends AppCompatActivity {
         }
         SimpleAdapter adapter = new SimpleAdapter(this, data, android.R.layout.simple_list_item_1, new String[]{"name"}, new int[]{android.R.id.text1});
         listView.setAdapter(adapter);
+    }
+
+
+    public void ripple(View view) {
+        Toast.makeText(getApplicationContext(),"ripple click",Toast.LENGTH_SHORT).show();
+
     }
 }
